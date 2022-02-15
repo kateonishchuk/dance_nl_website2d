@@ -1,0 +1,291 @@
+:root {
+    --Inter: 'Inter', sans-serif;
+    --Kaushan: 'Kaushan Script', cursive;
+    --Mont: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--Mont);
+    color: #fff;
+}
+
+.page {
+    background-color: #cf1932;
+}
+
+.menu {
+    margin: 2rem 0;
+}
+
+.menu-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-top a {
+    text-decoration: none;
+}
+
+
+.header-top a span {
+    color: #fff;
+    font-weight: 700;
+}
+
+.menu-wrap h2,
+.menu-wrap p {
+    color: #fff;
+}
+
+.active-p {
+    color: orange;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.menu-wrap {
+    text-align: center;
+}
+
+.menu-wrap h2 {
+    font-family: var(--Kaushan);
+    font-size: 2.6rem;
+}
+
+.menu-wrap p {
+    font-weight: 300;
+    padding: 1.8rem 0;
+}
+
+.menu-btns {
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-btn{
+    font-family: var(--Inter);
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: #ff9505;
+    display: block;
+    margin: 0 1rem;
+    cursor: pointer;
+    outline: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+.menu-btn::after {
+    content: "";
+    display: block;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ff9505;
+    margin-top: 0.5rem;
+    width: 0;
+    transition: width 0.4s ease-out;
+}
+
+.menu-btn:hover::after {
+    width: 100%;
+}
+
+.menu-btn:hover {
+    opacity: 0.8;
+}
+
+.pag-nav {
+    margin: 1rem 3.5rem;
+}
+
+.pag {
+    width: 50rem;
+}
+
+.page-link {
+    font-size: 20px;
+    font-weight: 600;
+    width: 10rem;
+}
+
+.logo i {
+    background-color: #fff;
+}
+
+.page-item a {
+    text-align: center;
+}
+
+.page-item a:hover {
+    color: #e7880a;
+    background-color: #a3a09b;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+.fas, .fab {
+    text-decoration: none;
+}
+
+.active-btn {
+    color: #e7880a;
+}
+
+.wardrobe-items {
+    margin: 2rem 0;
+}
+
+.wardrobe-item {
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    margin: 0.6rem 0;
+    box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.75);
+    /* display: ; */
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.wardrobe-img img {
+    border-radius: 4px;
+    max-width: 250px;
+    max-height: 200px;
+}
+
+.wardrobe-content {
+    padding: 1rem;
+}
+
+.wardrobe-name {
+    font-family: var(--Inter);
+    color: #ff9505;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.line {
+    width: 100px;
+    height: 3px;
+    background: #ff9505;
+}
+
+.wardrobe-price {
+    padding: 0.4rem 0;
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.wardrobe-rating {
+    display: flex;
+    list-style: none;
+}
+
+.wardrobe-rating .fa-star {
+    margin-right: 0.4rem;
+    color: #44355b;
+}
+
+.fa-star {
+    font-size: 1.5rem;
+}
+
+.category {
+    padding-top: 0.2rem;
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-family: var(--Inter);
+}
+
+.menu-text {
+    font-size: 4.75rem;
+}
+
+.menu-info {
+    font-size: 2.25rem;
+}
+
+.wardrobe-category {
+    font-size: 1.5rem;
+}
+
+.category span {
+    font-weight: 500;
+}
+
+#prev-l {
+    font-size: 2rem;
+}
+
+#next-l {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 600px){
+
+    .wardrobe-item {
+        display: grid;
+        grid-template-columns: 25% auto;
+        align-items: center;
+        padding: 1rem;
+        column-gap: 1rem;
+    }
+
+    .wardrobe-content {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .menu-wrap p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .menu-wrap p {
+        width: 50%;
+    }
+    
+    .wardrobe-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
